@@ -1,4 +1,4 @@
-import com.sun.org.apache.xpath.internal.operations.Bool;
+package src;
 
 import javax.swing.*;
 import java.awt.*;
@@ -59,6 +59,12 @@ class MyWindow extends JFrame{
                             cell.digitBtn.setEnabled(false);
                         }else{
                             cell.digitBtn.setEnabled(true);
+                        }
+                    }
+                    if (SwingUtilities.isMiddleMouseButton(e)) {
+                        if(cell.digitBtn.isEnabled()){
+                            cell.digit=1;
+                            cell.digitBtn.setText("");
                         }
                     }
                 }
